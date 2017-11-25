@@ -1,0 +1,65 @@
+
+
+h3 {
+    text-align: left;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.text {
+    display: block;
+    margin-top: 40px;
+    font-size:18px;
+}
+
+.text-bottom {
+    display: block;
+    margin-bottom: 40px;
+    font-size:18px;
+}
+
+.text-block {
+    text-align: left;
+    font-size:18px;
+
+    p {
+        padding: 10px;
+    }
+}
+
+ul {
+    text-align: left;
+    font-size: 18px;
+
+    li {
+        padding-bottom: 5px;
+    }
+}
+
+#canvas {
+    display: block;
+}
+
+div {
+    margin: auto;
+    display: inline;
+}
+
+pre  {
+    text-align: left;
+    margin: auto;
+    padding: 20px;
+    font: 100% courier,monospace;
+    border: 1px solid #ccc;
+    overflow: auto;
+    overflow-x: scroll;
+    width: 90%;
+    padding: 0 1em 1em 1em;
+    margin: 1em auto 2em auto;
+    background: #fff7f0;
+    color: #000
+ }
+code { font-size: 120% }
+.odd  { color: #600; background: #fff7f0 }
+.even { color: #006; background: #fff7f0 }
+.rem  { color: #060; background: #fff7f0 }

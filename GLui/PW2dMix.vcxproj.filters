@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{02b749fa-cf48-428e-84d0-11c3259e19dc}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GLdemo Source">
+      <UniqueIdentifier>{ac7de139-789a-43c6-adae-819278fb024a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{19031500-19ea-4336-8f5f-5077cf4cbda4}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GLdemo Header">
+      <UniqueIdentifier>{b85b4b99-6939-4f6b-88cd-d165ce169a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{df5408c5-c23b-4afb-97c5-a46d195950e6}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{26972d0d-b781-4728-a296-29df5b44e62d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GLDemoView.cpp">
+      <Filter>Source Files\GLdemo Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Hdibapi.cpp">
+      <Filter>Source Files\GLdemo Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL.cpp">
+      <Filter>Source Files\GLdemo Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL3D.cpp">
+      <Filter>Source Files\GLdemo Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL4D.cpp">
+      <Filter>Source Files\GLdemo Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Str.cpp">
+      <Filter>Source Files\GLdemo Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OglView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MAINFRM.CPP">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PW2dMixDoc.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="OglApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MAINFRM.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PW2dMix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PW2dMixDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassArr.h">
+      <Filter>Header Files\GLdemo Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GLDemoView.h">
+      <Filter>Header Files\GLdemo Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Hdibapi.h">
+      <Filter>Header Files\GLdemo Header</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL.h">
+      <Filter>Header Files\GLdemo Header</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL3D.h">
+      <Filter>Header Files\GLdemo Header</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL4D.h">
+      <Filter>Header Files\GLdemo Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Str.h">
+      <Filter>Header Files\GLdemo Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DecInclude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OglView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PW2dMix.rc">
+      <Filter>Header Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\logo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="logo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\main.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="main.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\PW2dMix.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="sdi.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sdi.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\viewcon.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PW2dMix.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
