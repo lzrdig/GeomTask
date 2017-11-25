@@ -9,9 +9,10 @@ using SharpGL.SceneGraph.Lighting;
 using SharpGL.SceneGraph.Effects;
 using SharpGL.SceneGraph.Quadrics;
 using System.Collections.ObjectModel;
+using CylinderWrapperCSharp;
 
 namespace SceneSample
-{
+{ 
     public partial class FormSceneSample : Form
     {
         private Point mMouseLeftBtnPos = new Point();
@@ -248,13 +249,23 @@ namespace SceneSample
 
             var angZ = 57.2957795 * Math.Acos(dz / cylHeight);
             var angY = 0.0;
+            double pitchAng = 0.0, rollAng = 0.0;
             if (xyProjComp != 0.0)
+            {
                 angY = 57.2957795 * Math.Acos(dx / xyProjComp);
 
-            // order of rotation will be Yaw, Pitch, roll. Yaw is = 0
-            // Yaw is rotation around X axis, Pitch - around Y axiz
-            var pitchAng = -Math.Asin((dz / cylHeight) * (dx / xyProjComp));
-            var rollAng = Math.Atan(Math.Sin(angY)/ Math.Tan(angZ));
+                // order of rotation will be Yaw, Pitch, roll. Yaw is = 0
+                // Yaw is rotation around X axis, Pitch - around Y axiz, , Roll - around Y axiz           
+
+                if ((dz / cylHeight) * (dx / xyProjComp) == 0.0)
+                    pitchAng = 0.0;
+                else
+                    pitchAng = -Math.Asin((dz / cylHeight) * (dx / xyProjComp));
+                if (angY == 0.0 || Math.Tan(angZ) == 0.0)
+                    rollAng = 0.0;
+                else
+                    rollAng = Math.Atan(Math.Sin(angY) / Math.Tan(angZ));
+            }
 
             //  Create a cylinder body.
             Cylinder cyl = new Cylinder();
@@ -265,7 +276,7 @@ namespace SceneSample
             cyl.TopRadius = cyl.BaseRadius;
             cyl.Transformation.RotateY = (float)pitchAng;
             //cyl.Transformation.RotateX = (float)angZ;
-            cyl.Transformation.RotateZ = (float)rollAng;
+            cyl.Transformation.RotateX = (float)rollAng;
             cyl.Transformation.TranslateX = float.Parse(bottomPosX.Text);
             cyl.Transformation.TranslateY = float.Parse(bottomPosY.Text);
             cyl.Transformation.TranslateZ = float.Parse(bottomPosZ.Text);
@@ -333,6 +344,18 @@ namespace SceneSample
             }
 
             DrawCylAndPoint();
+        }
+
+        private void OnCalculateClick(object sender, EventArgs e)
+        {
+            var dist = NativeMethods.GetDistFromPtToCylinder(
+                Convert.ToDouble(baseRadius.Text),
+                Convert.ToDouble(bottomPosX.Text), Convert.ToDouble(bottomPosY.Text), Convert.ToDouble(bottomPosZ.Text),
+                Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text),
+                Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text)
+                );
+
+            calcDist.Text = string.Format("5.3%f", dist);
         }
     }
 }
