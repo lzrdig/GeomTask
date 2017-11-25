@@ -241,9 +241,9 @@ namespace SceneSample
             var dx = Convert.ToDouble(topPosX.Text) - Convert.ToDouble(bottomPosX.Text);
             var dy = Convert.ToDouble(topPosY.Text) - Convert.ToDouble(bottomPosY.Text);
             var dz = Convert.ToDouble(topPosZ.Text) - Convert.ToDouble(bottomPosZ.Text);
-            var cylHeight = Math.Sqrt(dx * dx + dy * dy + dz * dz);
-                        
-            var xyProjComp = Math.Sqrt(cylHeight * cylHeight - dz * dz);
+            var cylHeight = Math.Sqrt(dx * dx + dy * dy + dz * dz);                        
+            var xyProjComp = Math.Sqrt(dx*dx +dy*dy);
+
             var gl = sceneControl1.OpenGL;
 
             var angZ = 57.2957795 * Math.Acos(dz / cylHeight);
@@ -251,6 +251,10 @@ namespace SceneSample
             if (xyProjComp != 0.0)
                 angY = 57.2957795 * Math.Acos(dx / xyProjComp);
 
+            // order of rotation will be Yaw, Pitch, roll. Yaw is = 0
+            // Yaw is rotation around X axis, Pitch - around Y axiz
+            var pitchAng = -Math.Asin((dz / cylHeight) * (dx / xyProjComp));
+            var rollAng = Math.Atan(Math.Sin(angY)/ Math.Tan(angZ));
 
             //  Create a cylinder body.
             Cylinder cyl = new Cylinder();
@@ -259,9 +263,9 @@ namespace SceneSample
             cyl.Stacks = 16;
             cyl.Height = cylHeight;
             cyl.TopRadius = cyl.BaseRadius;
-            cyl.Transformation.RotateY = (float)angZ;
-            cyl.Transformation.RotateX = (float)angZ;
-            cyl.Transformation.RotateZ = (float)angY;
+            cyl.Transformation.RotateY = (float)pitchAng;
+            //cyl.Transformation.RotateX = (float)angZ;
+            cyl.Transformation.RotateZ = (float)rollAng;
             cyl.Transformation.TranslateX = float.Parse(bottomPosX.Text);
             cyl.Transformation.TranslateY = float.Parse(bottomPosY.Text);
             cyl.Transformation.TranslateZ = float.Parse(bottomPosZ.Text);
@@ -280,9 +284,9 @@ namespace SceneSample
             bottomCylCap.Transformation.TranslateX = float.Parse(bottomPosX.Text);
             bottomCylCap.Transformation.TranslateY = float.Parse(bottomPosY.Text);
             bottomCylCap.Transformation.TranslateZ = float.Parse(bottomPosZ.Text);
-            bottomCylCap.Transformation.RotateY = (float)angZ;
-            bottomCylCap.Transformation.RotateX = (float)angZ;
-            bottomCylCap.Transformation.RotateZ = (float)angY;
+            cyl.Transformation.RotateY = (float)pitchAng;
+            //cyl.Transformation.RotateX = (float)angZ;
+            cyl.Transformation.RotateZ = (float)rollAng;
 
             //  Add it.
             sceneControl1.Scene.SceneContainer.AddChild(bottomCylCap);
@@ -295,9 +299,9 @@ namespace SceneSample
             Disk topCylCap = new Disk();
             topCylCap.InnerRadius = 0;
             topCylCap.OuterRadius = cyl.BaseRadius;
-            topCylCap.Transformation.RotateY = (float)angZ;
-            topCylCap.Transformation.RotateX = (float)angZ;
-            topCylCap.Transformation.RotateZ = (float)angY;
+            cyl.Transformation.RotateY = (float)pitchAng;
+            //cyl.Transformation.RotateX = (float)angZ;
+            cyl.Transformation.RotateZ = (float)rollAng;
             topCylCap.Transformation.TranslateX = float.Parse(topPosX.Text);
             topCylCap.Transformation.TranslateY = float.Parse(topPosY.Text);
             topCylCap.Transformation.TranslateZ = float.Parse(topPosZ.Text);
