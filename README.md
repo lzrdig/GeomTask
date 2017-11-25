@@ -24,7 +24,7 @@ WebGL.sln
 5) Lastly, WebGL.sln solution demonstrates the Angular 2 based UI mentioned above. Unfortunately, Visual Studio is not friendly with the path resolutions that takes places when the modules/components get loaded. Therefore, currently, a NPM task runner is used to start the UI by going to the Task Run Esxplorer and running the "start" task. Patience will be required before all node modules will get downloaded.
 
 
-#h2 To Do List
+### To Do List
 
 1) Implement the exporting of a C++ class to the Managed platform (C#, any .NET for that matter). It can be done either through the PInvoke, or creation of a Managed wrapper class in C++.
 
