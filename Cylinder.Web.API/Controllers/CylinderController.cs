@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Web.Http;
-
+using System.Runtime.InteropServices;
+using CylinderWrapperCSharp;
 
 
 namespace Cylinder.API.Controllers
@@ -11,7 +11,7 @@ namespace Cylinder.API.Controllers
     {
         private const string DllFilePath = @"Cylinder.dll";
 
-        [DllImport(DllFilePath, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(DllFilePath, CallingConvention = CallingConvention.Cdecl, EntryPoint = "GetDistFromPtToCylinder")]
         private extern static double GetDistFromPtToCylinder(double radius,
             double bottomX, double bottomY, double bottomZ,
             double topX, double topY, double topZ,
@@ -49,12 +49,20 @@ namespace Cylinder.API.Controllers
             double bottomX = 0.0; double bottomY = 0.0; double bottomZ = 0.0;
             double topX = 0.0; double topY = 0.0; double topZ = 20.0;
 
-            GetDistFromPtToCylinder( radius,
-                        bottomX, bottomY, bottomZ,
-                        topX, topY, topZ,
-                        testptx, testpty, testptz
-                        );
+            using (NativeMethods cylDLL = new NativeMethods())
+            {
+                distance = cylDLL.GetDistanceFromPt2Cyl(radius,
+                            bottomX, bottomY, bottomZ,
+                            topX, topY, topZ,
+                            testptx, testpty, testptz
+                            );
+            }
 
+            distance = GetDistFromPtToCylinder(radius,
+                            bottomX, bottomY, bottomZ,
+                            topX, topY, topZ,
+                            testptx, testpty, testptz
+                            );
             return distance;
         }
 

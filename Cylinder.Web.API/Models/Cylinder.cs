@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Cylinder.API.Models
+﻿namespace Cylinder.API.Models
 {
     public class Cylinder
     {

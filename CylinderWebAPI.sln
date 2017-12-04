@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cylinder.API", "Cylinder.Web.API\Cylinder.API.csproj", "{4E8BCD84-23BD-4883-B3F4-5A8327C4AA46}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,6 +9,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cylinder.API", "Cylinder.We
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cylinder", "CylinderDLL\GeomTask.vcxproj", "{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CylinderWrapperCSharp", "CylinderWrapperCSharp\CylinderWrapperCSharp.csproj", "{D86CF38B-2478-4624-BC19-CFF4E16B6091}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400} = {1143EF01-9D6B-4EDB-8273-CB3D58DBE400}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestManagedWrapper", "TestManagedWrapper\TestManagedWrapper.csproj", "{93BA326C-1209-40F3-A198-182BF35E50C0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400} = {1143EF01-9D6B-4EDB-8273-CB3D58DBE400}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppToTestWrapper", "AppToTestWrapper\AppToTestWrapper.csproj", "{D0F498E4-6763-4475-8FC2-780CF335B07A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400} = {1143EF01-9D6B-4EDB-8273-CB3D58DBE400}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,8 +57,47 @@ Global
 		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}.Release|x64.Build.0 = Release|x64
 		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}.Release|x86.ActiveCfg = Release|Win32
 		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}.Release|x86.Build.0 = Release|Win32
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Debug|x64.Build.0 = Debug|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Debug|x86.Build.0 = Debug|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Release|x64.ActiveCfg = Release|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Release|x64.Build.0 = Release|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Release|x86.ActiveCfg = Release|Any CPU
+		{D86CF38B-2478-4624-BC19-CFF4E16B6091}.Release|x86.Build.0 = Release|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Debug|x64.Build.0 = Debug|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Debug|x86.Build.0 = Debug|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Release|x64.ActiveCfg = Release|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Release|x64.Build.0 = Release|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Release|x86.ActiveCfg = Release|Any CPU
+		{93BA326C-1209-40F3-A198-182BF35E50C0}.Release|x86.Build.0 = Release|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Debug|x64.Build.0 = Debug|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Debug|x86.Build.0 = Debug|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Release|x64.ActiveCfg = Release|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Release|x64.Build.0 = Release|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Release|x86.ActiveCfg = Release|Any CPU
+		{D0F498E4-6763-4475-8FC2-780CF335B07A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28686639-8CD2-42B0-BC28-5EEB6B85737E}
 	EndGlobalSection
 EndGlobal

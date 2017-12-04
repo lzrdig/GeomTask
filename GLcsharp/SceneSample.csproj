@@ -51,6 +51,7 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -137,9 +138,9 @@
     <Content Include="SharpGL.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CylinderWrapperCSharp\CylinderWrapperCSharp.csproj">
-      <Project>{d86cf38b-2478-4624-bc19-cff4e16b6091}</Project>
-      <Name>CylinderWrapperCSharp</Name>
+    <ProjectReference Include="..\CylinderWrapperNET\CylinderWrapperNET.vcxproj">
+      <Project>{f2c73dae-6ef5-4663-9c49-a4960c315e96}</Project>
+      <Name>CylinderWrapperNET</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -2,7 +2,14 @@
 
 #include "CommonDeclares.h"
 
-extern "C" __declspec(dllexport) double __cdecl GetDistFromPtToCylinder(double radius,
+#ifdef GEOMTASK_EXPORTS
+#define  NATIVE_API __declspec(dllexport)
+#else
+#define  NATIVE_API __declspec(dllimport)
+#endif
+
+
+extern "C" NATIVE_API double __cdecl GetDistFromPtToCylinder(double radius,
 	double bottomX, double bottomY, double bottomZ,
 	double topX, double topY, double topZ,
 	double ptX, double ptY, double ptZ
@@ -59,3 +66,4 @@ namespace GeomTask
 	};
 
 }
+
