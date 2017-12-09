@@ -3,7 +3,8 @@ using System.Linq;
 using System.Web.Http;
 using System.Runtime.InteropServices;
 using CylinderWrapperCSharp;
-
+using System.Net.Http;
+using System.Net;
 
 namespace Cylinder.API.Controllers
 {
@@ -80,6 +81,21 @@ namespace Cylinder.API.Controllers
         //public void Post([FromBody]string value)
         //{
         //}
+        
+        [HttpPost]
+        public HttpResponseMessage Post([FromBody]Models.Cylinder cylJSON, [FromUri]double ptX, [FromUri]double ptY, [FromUri]double ptZ)
+        {
+            //HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, cylJSON);
+
+            var dist = GetDistFromPtToCylinder(cylJSON.radius,
+                cylJSON.bottomPt.X, cylJSON.bottomPt.Y, cylJSON.bottomPt.Z,
+                cylJSON.topPt.X, cylJSON.topPt.Y, cylJSON.topPt.Z,
+                ptX, ptY, ptZ);
+
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, dist);
+
+            return response;
+        }
 
         //// PUT api/cylinders/5
         //public void Put(int id, [FromBody]string value)
