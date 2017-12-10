@@ -1,6 +1,6 @@
-
-<h1>WebGL: UI for Geometry task</h1>
-
+<!-- <p>
+  webglwnd works!
+</p> -->
 <div #rendererContainer></div>
 <p>Use the mouse to rotate the scene in the window</p>
 <table class="table-bordered">
@@ -106,17 +106,21 @@
             <input type="text" class="form-control" id="testPtZ" [(ngModel)] = "testpt.Z">
           </div>       
       </td>                
-    </tr>    
+    </tr>   
+    <tr>
+      <td>
+        <div class="form-group">
+          <label for="usr"></label>
+          <button class="btn-default">Calculate Distance</button>
+        </div>
+      </td>
+      <td>
+        <div>
+          <input type="text" class="form-control" id="caclDist" [(ngModel)] = "calcDist">
+        </div>
+      </td>        
+    </tr>      
   </tbody>
 </table>
 <div></div>
-<p></p>
-<div>
-  <table>
-    <tr>
-      <td></td>
-      <td><button class="btn-default">Calculate Distance</button></td>
-      <td><input type="text" class="form-control" id="caclDist" [(ngModel)] = "calcDist"></td>
-    </tr>    
-  </table>  
-</div>
+
