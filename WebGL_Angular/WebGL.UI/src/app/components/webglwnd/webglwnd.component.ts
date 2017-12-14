@@ -30,7 +30,20 @@ export class WebglwndComponent implements OnInit {
         X:0.0,
         Y:0.0,
         Z:200.0},
-      baseRadius:100
+      baseRadius:100,
+      cylHeight:0.0,
+      calculateHeight():number{
+        var dx = Math.abs(this.topCtr.X - this.bottomCtr.X);
+        var dy = Math.abs(this.topCtr.Y - this.bottomCtr.Y);
+        var dz = Math.abs(this.topCtr.Z - this.bottomCtr.Z);
+
+        this.cylHeight = Math.sqrt(dx*dx + dy*dy + dz*dz);
+
+        return this.cylHeight;
+      },
+      calculateRotation(){
+        
+      }
     };
   
     testpt = {X:200, Y:100, Z:500};
