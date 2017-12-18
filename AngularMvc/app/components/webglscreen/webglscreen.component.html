@@ -1,0 +1,129 @@
+
+<div #rendererContainer></div>
+<div>
+  <p align="center">Use the mouse to rotate the scene in the window.<br />
+    Mouse wheel allows zooming in and out.<br />
+    Hold down right button to move the scene around (panning)
+  </p>
+</div>
+<table class="table-bordered">
+  <thead>
+    <tr>
+      <td colspan="4" align="center"><h2>Cylinder parameters</h2></td>
+    </tr>
+    <tr>
+      <th>3D coord</th>
+      <td align="center"><b>X</b></td>
+      <td align="center"><b>Y</b></td>
+      <td align="center"><b>Z</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+          <div class="form-group">
+            <label>Bottom center point coordinates</label>
+          </div>       
+      </td>      
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="number" class="form-control" id="bottomX" [ngModel] = "cylinder.bottomCtr.X" (ngModelChange)="bottomctrXvaluechange($event)">
+          </div>       
+      </td>
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="number" class="form-control" id="bottomY" [ngModel] = "cylinder.bottomCtr.Y" (ngModelChange)="bottomctrYvaluechange($event)">
+          </div>       
+      </td>    
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="number" class="form-control" id="bottomZ" [ngModel] = "cylinder.bottomCtr.Z" (ngModelChange)="bottomctrZvaluechange($event)">
+          </div>       
+      </td>     
+    </tr>
+    <tr>
+      <td>
+          <div class="form-group">
+            <label>Top center point coordinates</label>
+          </div>       
+      </td>      
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="number" class="form-control" id="topX" [ngModel] = "cylinder.topCtr.X" (ngModelChange)="topctrXvaluechange($event)">
+          </div>       
+      </td>
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="number" class="form-control" id="topY" [ngModel] = "cylinder.topCtr.Y" (ngModelChange)="topctrYvaluechange($event)">
+          </div>       
+      </td>    
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="number" class="form-control" id="topZ" [ngModel] = "cylinder.topCtr.Z" (ngModelChange)="topctrZvaluechange($event)">
+          </div>       
+      </td>     
+    </tr>  
+    <tr>
+        <td>
+            <div class="form-group">
+              <label for="usr">Base Radius</label>
+            </div>       
+        </td>    
+        <td>
+            <div class="form-group">
+              <label for="usr"></label>
+              <input type="number" class="form-control" id="baseRadius" [ngModel] = "cylinder.baseRadius" (ngModelChange)="radiusvaluechange($event)">
+            </div>       
+        </td>         
+    </tr> 
+    <tr>
+      <td colspan="4" align="center"><h2>Test point coordinates</h2></td>
+    </tr>
+    <tr>
+      <td>
+          <div class="form-group">
+            <label></label>
+          </div>       
+      </td>      
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="text" class="form-control" id="testPtX" [(ngModel)] = "testpt.X">
+          </div>       
+      </td>    
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="text" class="form-control" id="testPtY" [(ngModel)] = "testpt.Y">
+          </div>       
+      </td>    
+      <td>
+          <div class="form-group">
+            <label for="usr"></label>
+            <input type="text" class="form-control" id="testPtZ" [(ngModel)] = "testpt.Z">
+          </div>       
+      </td>                
+    </tr>
+    <tr>
+      <td><button class="btn-default">Calculate Distance</button></td>
+      <td><input type="text" class="form-control" id="caclDist" [(ngModel)] = "calcDist"></td>
+    </tr>
+  </tbody>
+</table>
+<div></div>
+<p></p>
+<!-- <div>
+  <table>
+    <tr>
+      <td></td>
+      <td><button class="btn-default">Calculate Distance</button></td>
+      <td><input type="text" class="form-control" id="caclDist" [(ngModel)] = "calcDist"></td>
+    </tr>    
+  </table>  
+</div> -->

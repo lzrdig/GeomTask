@@ -1,0 +1,13 @@
+﻿{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node", // <-----
+    "noImplicitAny": false,
+    "lib":[ "es2017", "dom"],
+    "rootDir": "app",
+    "typeRoots": [ "../node_modules/@types"  ]
+  }
+}

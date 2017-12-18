@@ -1,32 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebGL.UI", "WebGL_Angular\WebGL.UI\", "{3134A36D-B1EF-405C-A425-32379D057A10}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_56428"
-		Debug.AspNetCompiler.PhysicalPath = "WebGL_Angular\WebGL.UI\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56428\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_56428"
-		Release.AspNetCompiler.PhysicalPath = "WebGL_Angular\WebGL.UI\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56428\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "56428"
-		SlnRelativePath = "WebGL_Angular\WebGL.UI\"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cylinder.API", "Cylinder.Web.API\Cylinder.API.csproj", "{4E8BCD84-23BD-4883-B3F4-5A8327C4AA46}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cylinder", "CylinderDLL\GeomTask.vcxproj", "{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWithAngular2", "AngularMvc\MvcWithAngular2.csproj", "{CAFF4224-10BA-4768-9B91-C30570662EEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,18 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Debug|x64.Build.0 = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Debug|x86.Build.0 = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Release|x64.ActiveCfg = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Release|x64.Build.0 = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Release|x86.ActiveCfg = Debug|Any CPU
-		{3134A36D-B1EF-405C-A425-32379D057A10}.Release|x86.Build.0 = Debug|Any CPU
 		{4E8BCD84-23BD-4883-B3F4-5A8327C4AA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E8BCD84-23BD-4883-B3F4-5A8327C4AA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E8BCD84-23BD-4883-B3F4-5A8327C4AA46}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -72,8 +41,23 @@ Global
 		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}.Release|x64.Build.0 = Release|x64
 		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}.Release|x86.ActiveCfg = Release|Win32
 		{1143EF01-9D6B-4EDB-8273-CB3D58DBE400}.Release|x86.Build.0 = Release|Win32
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Debug|x64.Build.0 = Debug|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Debug|x86.Build.0 = Debug|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Release|x64.ActiveCfg = Release|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Release|x64.Build.0 = Release|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Release|x86.ActiveCfg = Release|Any CPU
+		{CAFF4224-10BA-4768-9B91-C30570662EEC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4140182-F4E7-4D85-8CB1-003FB28AD726}
 	EndGlobalSection
 EndGlobal

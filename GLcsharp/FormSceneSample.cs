@@ -9,8 +9,9 @@ using SharpGL.SceneGraph.Lighting;
 using SharpGL.SceneGraph.Effects;
 using SharpGL.SceneGraph.Quadrics;
 using System.Collections.ObjectModel;
-//using CylinderWrapperCSharp;
-using CylinderWrapperNET;
+
+using CylinderWrapperCSharp;
+//using CylinderWrapperNET;
 
 namespace SceneSample
 { 
@@ -349,21 +350,21 @@ namespace SceneSample
 
         private void OnCalculateClick(object sender, EventArgs e)
         {
-            //var dist = NativeMethods.GetDistFromPtToCylinder(
-            //    Convert.ToDouble(baseRadius.Text),
-            //    Convert.ToDouble(bottomPosX.Text), Convert.ToDouble(bottomPosY.Text), Convert.ToDouble(bottomPosZ.Text),
-            //    Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text),
-            //    Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text)
-            //    );
-
-            var cylRef = new CylinderWrapper(
+            var dist = NativeMethods.(
                 Convert.ToDouble(baseRadius.Text),
                 Convert.ToDouble(bottomPosX.Text), Convert.ToDouble(bottomPosY.Text), Convert.ToDouble(bottomPosZ.Text),
-                Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text)
-            );
-            var dist = cylRef.GetDistanceFromPtToCyl(
+                Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text),
                 Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text)
                 );
+
+            //var cylRef = new CylinderWrapper(
+            //    Convert.ToDouble(baseRadius.Text),
+            //    Convert.ToDouble(bottomPosX.Text), Convert.ToDouble(bottomPosY.Text), Convert.ToDouble(bottomPosZ.Text),
+            //    Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text)
+            //);
+            //var dist = cylRef.GetDistanceFromPtToCyl(
+            //    Convert.ToDouble(topPosX.Text), Convert.ToDouble(topPosY.Text), Convert.ToDouble(topPosZ.Text)
+            //    );
 
             calcDist.Text = string.Format("5.3%f", dist);
         }
